@@ -10,7 +10,7 @@
 // @noframes
 // ==/UserScript==
 
-document.querySelector('h2').textContent.includes('Internal Server Error') &&
+document.title.includes('Internal Server Error') &&
   setTimeout(
     () => document.location.reload(),
     Math.trunc(Math.random() * 6 + 5) * 1000,
