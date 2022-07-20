@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name        Mylar - Reload on Error
 // @namespace   https://github.com/Sporkyy/
-// @include     *://*:8090*
+// @match       *://*:8090*
 // @run-at      document-start
 // @grant       none
-// @version		  1.0
+// @version     1.0
 // @author      Todd Sayre
 // @description	Reloads the page if Mylar throws an error
 // @noframes
