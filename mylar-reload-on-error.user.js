@@ -2,7 +2,7 @@
 // @name        Mylar - Reload on Error
 // @namespace   https://github.com/Sporkyy/
 // @match       *://*:8090*
-// @run-at      document-start
+// @run-at      document-idle
 // @grant       none
 // @version     1.1
 // @author      Sporkyy
