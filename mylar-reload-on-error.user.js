@@ -5,7 +5,7 @@
 // @run-at      document-start
 // @grant       none
 // @version     1.0
-// @author      Todd Sayre
+// @author      Sporkyy
 // @description	Reloads the page if Mylar throws an error
 // @noframes
 // ==/UserScript==
@@ -13,9 +13,12 @@
 (() => {
   'use strict';
 
-  document.title.includes('Internal Server Error') &&
-    setTimeout(
-      () => document.location.reload(),
-      Math.trunc(Math.random() * 6 + 5) * 1000,
-    );
+  const randmm = (min, max) => Math.random() * (max - min) + min;
+
+  const dt = document.title;
+  const e = 'Internal Server Error';
+  const dl = document.location;
+  const ms = randmm(5000, 10000);
+
+  if (dt.includes(e)) setTimeout(() => dl.reload(), ms);
 })();
