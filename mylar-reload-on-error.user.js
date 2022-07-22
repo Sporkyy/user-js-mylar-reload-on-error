@@ -1,13 +1,12 @@
 // ==UserScript==
-// @name        Mylar - Reload on Error
-// @namespace   https://github.com/Sporkyy/
-// @match       *://*:8090*
-// @run-at      document-idle
-// @grant       none
-// @version     1.1
-// @author      Sporkyy
-// @description	Reloads the page if Mylar throws an error
-// @noframes
+// @name         Mylar - Reload on Error
+// @namespace    https://github.com/Sporkyy/
+// @version      1.0.1
+// @description	 Reloads the page if Mylar throws an error
+// @author       Sporkyy
+// @match        *://*:8090/*
+// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @grant        none
 // ==/UserScript==
 
 (() => {
@@ -15,10 +14,11 @@
 
   const randmm = (min, max) => Math.random() * (max - min) + min;
 
+  const w = window;
   const dt = document.title;
   const e = 'Internal Server Error';
   const dl = document.location;
   const ms = randmm(5000, 10000);
 
-  if (dt.includes(e)) setTimeout(() => dl.reload(), ms);
+  if (dt.includes(e)) w.setTimeout(() => dl.reload(), ms);
 })();
