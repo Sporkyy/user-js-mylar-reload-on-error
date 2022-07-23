@@ -4,7 +4,7 @@
 // @version      1.0.1
 // @description	 Reloads the page if Mylar throws an error
 // @author       Sporkyy
-// @match        *://*:8090/*
+// @match        *://localhost:8090/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
